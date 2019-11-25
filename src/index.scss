@@ -1,0 +1,11 @@
+body {
+    .huaji{
+        width: 100px;
+        height: 100px;
+        transform: translate(50px);
+    }
+
+    .li:nth-of-type(odd){
+        background: yellow;
+    }
+}
