@@ -1,4 +1,4 @@
-import {word} from "./word.js";
+import {word} from "./dir/word.js"
 
 const message = `say ${word}`
 
