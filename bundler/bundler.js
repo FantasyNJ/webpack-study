@@ -1,6 +1,8 @@
 const fs = require('fs')
 const path = require('path')
+// 解析ast语法树
 const parser = require('@babel/parser')
+// 深度遍历
 const traverse = require('@babel/traverse').default
 const babel = require('@babel/core')
 
@@ -18,6 +20,7 @@ const moduleAnalyser = (filename) => {
       dependencies[node.source.value] = './' + path.join(dirname, node.source.value)
     }
   })
+  // 将ast转换成可执行代码
   const { code } = babel.transformFromAstSync(ast, null, {
     presets: ["@babel/preset-env"]
   })
