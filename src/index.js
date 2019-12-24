@@ -53,3 +53,11 @@ console.log(this)  //  不指向window，如果想指向window就要使用import
 console.log(aNumber, 'typescript')
 
 console.log('Hello dell!')
+
+function getComponent() {
+  return import('./moduleA').then(({moduleA}) => {
+    console.log(moduleA)
+  })
+}
+
+getComponent()
